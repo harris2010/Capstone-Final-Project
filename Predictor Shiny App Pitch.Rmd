@@ -1,0 +1,53 @@
+---
+title: 'A Pitch for Next Word Predictor Shiny App '
+author: "Harris Panakkal"
+date: "May 3, 2018"
+output:
+  slidy_presentation:
+    incremental: yes
+  ioslides_presentation:
+    self_contained: false
+    incremental: yes
+    smaller: yes
+    transition: faster
+---
+
+## N-Gram Next Word Predictor
+
+- This is a Shiny app that accepts a user input of a single word or a combination of words and        predicts  the most probable word(s)
+
+- The project was developed using the knowledge on Natural Language Processing (NLP)
+
+- The data from a Corpus called HC Corpora was used for buiding the app 
+
+- In developing this app a few of R packages like tm-text mining, nlp-natural language processing and   quanteda- Quantitative Analysis of Textual Data in R were used
+
+
+## Screenshot of the App
+<div>
+![](A:/MEERA HARRIS/Coursera/Capstone Project/week1/github repository/Capstone-Final-Project/slide.png){width=1250px}
+</div>
+
+## Algorithm of the App
+- A very simplified approach known as "Stupid Backoff" was used for implementation
+- It uses a four-gram data frame
+- The four-gram data frame was sorted from highest to lowest frequency. 
+- The input words provided to the app are matched with all the four-grams and the ones matching all the    first 3 words, or 2 words are shown on the basis of frequency
+- If no four-gram is found, the search backs off to tri-grams data frame
+- Progressively If no tri-gram is found, we back off to bi-gram
+- If no bi-gram is found, app backs off to uni-gram
+- If the user provides more than three words input, only the last three are considered as an initial    parameter for predicting model function
+- If the user inputs profanity words, they are cleaned and changed to "*"
+- By sampling the corpus the file size of data shrunk to 6 Mb 
+- Thus allowing the Shiny app to process and produce a prediction in less than a second
+
+
+
+## References and Links
+- Stanford - Natural Language Processing Natural Language Processing: A Model to Predict a Sequence of   Words Text Mining Infrastructure in R (pdf file)
+- <a href="https://en.wikipedia.org/wiki/N-gram">Wikipedia</a> - n-gram Bigrams and Trigrams 
+- <a href="https://en.wikipedia.org/wiki/Boise_State_University">Boise State University Wikipedia</a> 
+- <a href="https://en.wikipedia.org/wiki/Katz%27s_back-off_model">Katz's back-off model<a/> Large Language Models in Machine Translation (Stupid Backoff) Smoothing, Interpolation and Backoff 
+- Find my shiny app <a href="https://harris2010.shinyapps.io/Capstone-Final-Project/">here</a>
+
+

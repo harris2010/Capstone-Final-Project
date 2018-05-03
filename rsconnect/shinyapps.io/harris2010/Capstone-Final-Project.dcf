@@ -1,0 +1,13 @@
+name: Capstone-Final-Project
+title: Capstone-Final-Project
+username:
+account: harris2010
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 336997
+bundleId: 1354447
+url: https://harris2010.shinyapps.io/Capstone-Final-Project/
+when: 1525378796.66342
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Predictor Shiny App Pitch.Rmd|Predictor_Shiny_App_Pitch.html|README.md|slide.png
